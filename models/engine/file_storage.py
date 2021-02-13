@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """FileStorage class"""
 
+from models.base_model import BaseModel
 import json
 import os.path
+
 
 class FileStorage:
     """File storage """
@@ -39,4 +41,3 @@ class FileStorage:
         if os.path.isfile(FileStorage.__file_path):
             with open(FileStorage.__file_path, 'r') as f:
                 json_dict = json.loads(f.read())
-
