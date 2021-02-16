@@ -1,15 +1,20 @@
 #!/usr/bin/python3
-"""FileStorage class"""
+"""
+FileStorage class
 
+"""
 from models.base_model import BaseModel
+from models.user import User
 import json
 import models
 import os.path
 
 
 class FileStorage:
-    """File storage """
+    """
+    Attributes class
 
+    """
     __file_path = 'file.json'
     __objects = {}
 
@@ -28,14 +33,17 @@ class FileStorage:
         """ fill dictionary from __objects"""
         for key, value in FileStorage.__objects.items():
             json_dict[key] = FileStorage.__objects[key].to_dict()
-            with open(self.__file_path, 'w') as f:
+            with open(self.__file_path, 'w', encoding="utf-8") as f:
                 f.write(json.dumps(json_dict))
 
     def reload(self):
         """Reload method"""
         if os.path.isfile(FileStorage.__file_path):
-            with open(FileStorage.__file_path, 'r') as f:
-                json_dict = json.loads(f.read())
-                for key, value in json_dict.items():
-                    FileStorage.__objects[key] = eval(value[
-                        '__class__'])(**value)
+            try:
+                with open(FileStorage.__file_path, 'r', encoding="utf-8") as f:
+                    json_dict = json.loads(f.read())
+                    for key, value in json_dict.items():
+                        FileStorage.__objects[key] = eval(value[
+                            '__class__'])(**value)
+            except:
+                pass
