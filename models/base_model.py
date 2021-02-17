@@ -32,7 +32,7 @@ class BaseModel:
         """ Return a string reprentation"""
         return "[{}] ({}) {}".format(
             self.__class__.__name__, self.id, self.__dict__)
-
+        
     def save(self):
         """ save method """
         self.updated_at = datetime.now()
