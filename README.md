@@ -15,11 +15,11 @@ The console is an collaborative project conducted by Carolina Hernandez Viveros 
 | Command   | Description | Usage example |
 | --------- | ----------- | ------- |
 | `help`      | Lists all available commands or details help with a specific command | `help <command>` |
-| `all`       | Display all instances of class name | `all <object>` |
-| `create`    | Creates a new instance of a class name | `create <object>` |
-| `destroy`   | Deletes an instance based on the class name and id  | `destroy <object> <id>` |
-| `show`      | Shows all object's attributes | `show <object> <id>` |
-| `update`    | Updates an instance based on the class name and id by adding or updating attribute | `update <object> <id> <attribute> <value>` |
+| `all`       | Display all instances of class name | `all <class_name>` |
+| `create`    | Creates a new instance of a class name | `create <class_name>` |
+| `destroy`   | Deletes an instance based on the class name and id  | `destroy <class_name> <id>` |
+| `show`      | Shows all object's attributes | `show <class_name> <id>` |
+| `update`    | Updates an instance based on the class name and id by adding or updating attribute | `update <class_name> <id> <attribute> <value>` |
 | `quit`      | Command to exit the interprete | `quit` |
 | `EOF`       | Command ro exit the interprete | `EOF` |
     
