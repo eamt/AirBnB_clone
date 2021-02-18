@@ -36,7 +36,7 @@ The resulting program can run either in interactive or non-interactive mode.
 
 ### **Interactive Mode**
 
-In interactive mode, simply run the program and wait for the prompt to appear. From there, type commands freely, exiting with either the "exit" command or ctrl-D.
+In interactive mode, simply run the program and wait for the prompt to appear. From there, type commands freely, exiting with either the "quit" or "EOF" command or ctrl-D.
 
 `./console.py`
 
