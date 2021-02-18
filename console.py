@@ -40,7 +40,6 @@ class HBNBCommand(cmd.Cmd):
         """
         Create a new object in BaseModel
         Save and print the id
-        
         """
         if argument:
             if argument in HBNBCommand.classes.keys():
@@ -58,7 +57,6 @@ class HBNBCommand(cmd.Cmd):
         """
         Prints the string representation of an instance based
         on the class name and id
-        
         """
         args = split(argument)
         if len(args[0]) == 0:
@@ -79,7 +77,6 @@ class HBNBCommand(cmd.Cmd):
         """
         Deletes an instance based on the class name and id 
         and saved the change into the JSON file
-
         """
         args = split(argument)
         if len(args) == 0:
@@ -101,7 +98,6 @@ class HBNBCommand(cmd.Cmd):
         """
         Prints all string representation of all instances
         based or not on the class name
-
         """
         args = split(argument)
         dic = models.storage.all()
@@ -123,7 +119,6 @@ class HBNBCommand(cmd.Cmd):
         Updates an instance based on the class name and id
         by adding or updating attribute and saved the change
         into the JSON file
-
         """
         args = split(argument)
         if len(args) == 0:
